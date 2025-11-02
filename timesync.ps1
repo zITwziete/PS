@@ -2,9 +2,7 @@
 # Autor: zitwziete.org
 # Strona: https://zitwziete.org
 # GitHub: https://github.com/zITwziete/PS
-# Wersja: 1.0
-#
-# Licencja Freeware - Korzystasz na wlasną odpowiedzialnosc 
+# Wersja: 3.0
 
 param(
     [string]$LogPath = "C:\Logs\TimeSync",
@@ -248,8 +246,8 @@ function Reset-DCTimeSync {
         }
     }
     catch {
-        Write-Host "Nie udalo sie zresetowac $DCName: $_" -ForegroundColor Red
-        Write-Log "Nie udalo sie zresetowac $DCName: $_" -Level "ERROR"
+        Write-Host "Nie udalo sie zresetowac ${DCName}: $_" -ForegroundColor Red
+        Write-Log "Nie udalo sie zresetowac ${DCName}: $_" -Level "ERROR"
     }
 }
 
@@ -393,8 +391,8 @@ function Configure-DomainMemberTimeSync {
         }
     }
     catch {
-        Write-Host "BLAD: Nie udalo sie skonfigurowac $ComputerName`: $_" -ForegroundColor Red
-        Write-Log "Nie udalo sie skonfigurowac czlonka domeny $ComputerName`: $_" -Level "ERROR"
+        Write-Host "BLAD: Nie udalo sie skonfigurowac ${ComputerName}: $_" -ForegroundColor Red
+        Write-Log "Nie udalo sie skonfigurowac czlonka domeny ${ComputerName}: $_" -Level "ERROR"
         
         Write-Host "`nWskazowki rozwiazywania problemow:" -ForegroundColor Yellow
         Write-Host "1. Upewnij sie, ze komputer jest dolaczony do domeny" -ForegroundColor Gray
